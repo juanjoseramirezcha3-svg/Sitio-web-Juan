@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Ramirez</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --text-dark: #f1f5f9;
+      --card-dark: #1e293b;
+      --accent: #38bdf8;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* CURSOR PERSONALIZADO */
+    .cursor {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: var(--accent);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background-attachment: fixed; /* PARALLAX */
+    }
+
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    section {
+      background: var(--card-dark);
+      margin: 20px auto;
+      padding: 25px;
+      max-width: 850px;
+      border-radius: 15px;
+    }
+
+    h2 {
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: #020617;
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    .card i {
+      font-size: 30px;
+      color: var(--accent);
+    }
+
+    /* ANIMACIONES */
+    .hidden-left { opacity: 0; transform: translateX(-50px); transition: 0.8s; }
+    .hidden-right { opacity: 0; transform: translateX(50px); transition: 0.8s; }
+    .hidden-zoom { opacity: 0; transform: scale(0.7); transition: 0.8s; }
+
+    .show { opacity: 1; transform: translateX(0) scale(1); }
+
+    /* CONTADOR */
+    .counter {
+      font-size: 2em;
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+<div class="cursor"></div>
+
+<header class="hidden-zoom">
+  <img src="tu-foto.jpg">
+  <h1>Juan Ramirez</h1>
+</header>
+
+<section class="hidden-left">
+  <h2>Sobre mí</h2>
+  <p>Hola, mi nombre es Juan Ramírez. Soy una persona apasionada por aprender cosas nuevas, la tecnología y la creatividad. Me caracterizo por ser responsable, organizado y comprometido con el cumplimiento de mis objetivos, por tener una actitud proactiva, con facilidad para aprender nuevas habilidades y adaptarme a distintos entornos de trabajo. Tengo interés en el crecimiento personal y profesional, lo que me motiva a mejorar constantemente mis conocimientos y desempeño. Busco oportunidades que me permitan desarrollar mis habilidades y adquirir experiencia en el ámbito laboral, contribuyendo de manera positiva al logro de metas.
+</p>
+</section>
+
+<section class="hidden-right">
+  <h2>Habilidades</h2>
+  <div class="grid">
+    <div class="card"><i class="fas fa-users"></i><p>Trabajo en equipo</p><div class="counter" data-target="90">0</div></div>
+    <div class="card"><i class="fas fa-comments"></i><p>Comunicación</p><div class="counter" data-target="85">0</div></div>
+    <div class="card"><i class="fas fa-lightbulb"></i><p>Creatividad</p><div class="counter" data-target="95">0</div></div>
+  </div>
+</section>
+
+<!-- HABILIDADES PERSONALES -->
+<section class="hidden-left">
+  <h2>Habilidades personales</h2>
+  <div class="grid">
+    <div class="card"><i class="fas fa-users"></i><p>Trabajo en equipo</p></div>
+    <div class="card"><i class="fas fa-comments"></i><p>Comunicación efectiva</p></div>
+    <div class="card"><i class="fas fa-clock"></i><p>Puntualidad</p></div>
+    <div class="card"><i class="fas fa-puzzle-piece"></i><p>Resolución de problemas</p></div>
+    <div class="card"><i class="fas fa-brain"></i><p>Pensamiento crítico</p></div>
+    <div class="card"><i class="fas fa-lightbulb"></i><p>Innovar</p></div>
+  </div>
+</section>
+
+<!-- HABILIDADES TÉCNICAS -->
+<section class="hidden-right">
+  <h2>Habilidades técnicas</h2>
+  <div class="grid">
+    <div class="card"><i class="fas fa-computer"></i><p>Manejo de computadoras</p></div>
+    <div class="card"><i class="fas fa-code"></i><p>Programación básica</p></div>
+    <div class="card"><i class="fas fa-database"></i><p>Bases de datos</p></div>
+    <div class="card"><i class="fas fa-paint-brush"></i><p>Diseño (Canva, editores)</p></div>
+  </div>
+</section>
+
+<!-- INTERESES -->
+<section class="hidden-zoom">
+  <h2>Mis intereses</h2>
+  <div class="grid">
+    <div class="card"><i class="fas fa-microchip"></i><p>Tecnología</p></div>
+    <div class="card"><i class="fas fa-palette"></i><p>Arte digital</p></div>
+    <div class="card"><i class="fas fa-gamepad"></i><p>Videojuegos</p></div>
+  </div>
+</section>
+
+<section class="hidden-zoom">
+  <h2>Redes</h2>
+
+  <a href="https://www.instagram.com/juanjo._ram/" target="_blank" style="margin-right: 25px;">
+    <i class="fab fa-instagram fa-2x"></i>
+  </a>
+
+  <a href="https://www.facebook.com/juanjose.ramirezchaver" target="_blank">
+    <i class="fab fa-facebook fa-2x"></i>
+  </a>
+</section>
+
+<footer class="hidden-left">
+  © 2026 Juan Ramirez
+</footer>
+
+<script>
+// PARTICULAS
+particlesJS("particles-js", { particles: { number: { value: 60 }, size: { value: 3 } } });
+
+// SCROLL
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+  });
+});
+document.querySelectorAll('[class*="hidden"]').forEach(el => observer.observe(el));
+
+// CONTADOR
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const inc = target / 50;
+    if (count < target) {
+      counter.innerText = Math.ceil(count + inc);
+      setTimeout(update, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  update();
+});
+
+// CURSOR
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.top = e.clientY + 'px';
+  cursor.style.left = e.clientX + 'px';
+});
+</script>
+
+</body>
+</html>
